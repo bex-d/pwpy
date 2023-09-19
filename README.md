@@ -11,13 +11,15 @@ To run the Pointwise Glyph API:
 	
  	https://pypi.org/project/pointwise-glyph-client/#files
 	
-3. to run in batch mode (port 0)
+2. to run in batch mode (port 0)
 	
  	add following path to environment variables (System Properties > Advanced > Environment Variables > User Variables > Path > Edit > New)
 	
  	"C:\Program Files\Cadence\PointwiseV18.6R3\win64\bin" (check correct location/version)
 	
-4. batch mode test via command line/powershell: 
+3. batch mode test 
+
+in command line/powershell: 
 	
 	python
 	
@@ -29,9 +31,9 @@ To run the Pointwise Glyph API:
 
 	pw = glf.get_glyphapi()
 
-5. connect to open GUI instance via command line/powershell: 
+4. connect to open GUI instance via command line/powershell: 
 
-in PW: 
+	in PW: 
 	
  	Script > Glyph Server > Active & port=2807
 	
