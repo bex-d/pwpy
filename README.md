@@ -1,5 +1,5 @@
 # pwpy
-Python library for the Pointwise Glyph API
+Python library for the Pointwise Glyph API. Not fully tested or documented yet.
 
 To run the Pointwise Glyph API:
 
