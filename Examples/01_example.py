@@ -2,8 +2,6 @@
 from pwpy import * 
 
 # Connect to Pointwise license
-from pointwise import GlyphClient
-from pointwise.glyphapi import *
 pw,glf = connectPort(2807)
 
 # Reset settings
@@ -123,4 +121,4 @@ if filename != 'C:/../Example_01.pw':
     domains = getByType(pw,'Domain')
     exportGrid(pw,domains,nasfile)
 else:
-    print('Update file directory on line 118 to save and export project')
+    print('Update file directory on line 116 to save and export project')
