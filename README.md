@@ -1,3 +1,5 @@
+New version with PyPi package available: https://github.com/bex-d/pointwisepy
+
 # pwpy
 Python library for the Pointwise Glyph API. Not fully tested or documented yet.
 
