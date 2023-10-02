@@ -216,3 +216,12 @@ def createDomainFromConnectors(pw,ents,gridtype='Unstructured'):
         print('Incorrect grid type: {}\nOptions are: "Structured", "Unstructured"'.format(gridtype))
         
     return doms      
+
+def patch(pw,ent):
+    
+    with pw.Application.begin('SurfaceFit') as patcher:
+        surface = patcher.createSurfacesFromCurves(ent)
+        patcher.setBoundaryTolerance(pw.Database.getFitTolerance())
+        patcher.setUseBoundaryTangency(False)
+        
+    return surface

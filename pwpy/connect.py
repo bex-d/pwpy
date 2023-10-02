@@ -5,18 +5,18 @@ import time
 from .get import *
 
 def connectPort(port=0,result=None):   
-"""
-Connects to a Pointwise license. 
-For GUI: Script > Glyph Server > Active & port=2807
+    """
+    Connects to a Pointwise license. 
+    For GUI: Script > Glyph Server > Active & port=2807
 
-Arguments:
-port: 0 for batch mode, 2807 for GUI
-result: None  - Will keep pinging server if no license 
-        False - Only look for license once
-        
-Returns:
-pw,glf
-"""
+    Arguments:
+    port: 0 for batch mode, 2807 for GUI
+    result: None  - Will keep pinging server if no license 
+            False - Only look for license once
+            
+    Returns:
+    pw,glf
+    """
     print('Looking for license...')
     LINE_UP = '\033[1A'
     LINE_CLEAR = '\x1b[2K'
@@ -47,9 +47,9 @@ pw,glf
                 print(LINE_UP,LINE_UP)
             
 def disconnectPW():
-"""
-Disconnects from a Pointwise license. Does not take arguments. 
-"""
+    """
+    Disconnects from a Pointwise license. Does not take arguments. 
+    """
     pw = 0
     glf = 0
     print('Disconnected from Pointwise License')
@@ -67,17 +67,17 @@ def setUndoMaximumLevels(pw,levels=5):
     pw.Application.setUndoMaximumLevels(levels)
           
 def delete(pw,ents):
-"""
-Deletes pointwise entities.
+    """
+    Deletes pointwise entities.
 
-Arguments:
-pw: Must be connected to Pointwise instance
-ents: Entities to delete. Accepts defined entities and string names. May have to be a list? 
-        
-Examples:
-delete(pw,getByType(pw,'Connector'))
-delete(pw,[surf1,surf2])
-"""
+    Arguments:
+    pw: Must be connected to Pointwise instance
+    ents: Entities to delete. Accepts defined entities and string names. May have to be a list? 
+            
+    Examples:
+    delete(pw,getByType(pw,'Connector'))
+    delete(pw,[surf1,surf2])
+    """
     try:
         for ent in ents:
             if type(ent) == str:

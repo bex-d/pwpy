@@ -2,6 +2,7 @@ from .connect import *
 from .create import *
 from .convert import *
 from .database import *
+from .defaults import *
 from .display import *
 from .extrude import *
 from .get import *
